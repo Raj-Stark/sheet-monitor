@@ -1,0 +1,662 @@
+{
+  "tabRows": {
+    "Lead": [
+      {
+        "NAME": "No name",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7006294898,
+        "__EMPTY_3": "raj babu"
+      },
+      {
+        "NAME": "Vivek Gupta",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8638210484,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "જય જોહર જય જોહર",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8780352217,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Yatharth Garg",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 6367857442,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Pooja Dwivedi",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9993871193,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Sanjye Riksha Arif",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9718922880,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Lalu দহিড়া",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9083555399,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Ravindra Kumar Varanasi",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9885534743,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "no name",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8958243844,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "⁠Andanamma Nidgundimath",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9110404224,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Naziya Ansari",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9821434385,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Naziya Ansari (same)",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9821434385,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Anju Om",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8000512587,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Tek Pal",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9811273010,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Rachu Swamy",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9741869874,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Srinjoy Ruj",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8617737381,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Manish Yogi",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9649174152,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Ramu Sharma Carpenter",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7477858899,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Sports Sir",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7415938330,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Jitendra Singh",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 6202106878,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Laxmikant Fendare",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7587924648,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Vinod G",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9876661909,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Anjana Bhoi",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8637275985,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Ram Tirath Giri",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9452445765,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Mr Rk",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 6202331630,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Manan Verma",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9599450024,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raviranjan Raj",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9507897420,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Seema S",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8971285084,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Jasleen",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8287442463,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Partik Kkr Partik Kkr",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9817242871,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Utkarsh Mba Call",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8929448874,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Aakash Bavri",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9053079161,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Sanket Pattekar",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9172021932,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Dev Pramanik",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7209360799,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Alka Chauhan",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8950622615,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Nitish Sahu",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8968106983,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Jay Nishu",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8877615681,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "M Tamil Selvan",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 7871644615,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "39. ⁠Monisha",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9654573872,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Kuri Poroi",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8729845319,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Vivek Dubey",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9811188367,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Mohit",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 6386224178,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Surya Maaran",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8838743599,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Abi Chakz",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8119849526,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Pankaj Kharwar Plv",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8858233474,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Sameer Patil",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8928021316,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Alka Chauhan",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8950622615,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "no name",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9939428444,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "It's Rc",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 9665583392,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Jk Drth",
+        "COURSE": "MASTER OF BUSINESS ADMINISTRATION",
+        "CONTACT": 8379918726,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "",
+        "COURSE": "",
+        "CONTACT": "",
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raj",
+        "COURSE": "Raj",
+        "CONTACT": "",
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raj",
+        "COURSE": "Raj",
+        "CONTACT": 1,
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raj",
+        "COURSE": "Raj",
+        "CONTACT": "",
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raj",
+        "COURSE": "Raj",
+        "CONTACT": "",
+        "__EMPTY_3": ""
+      },
+      {
+        "NAME": "Raj",
+        "COURSE": "Raj",
+        "CONTACT": "",
+        "__EMPTY_3": ""
+      }
+    ],
+    "Hot Lead ": [
+      {
+        "Name": "Saaiswetha",
+        "Email": "saaiswetha139@gmail.com",
+        "Phone Number": 8778032436,
+        "Location": "Bengaluru",
+        "Courese": "Operations Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Vilas Kamath",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Hashvinder Singh",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Kanika Bhardwaj",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Himanshu",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "dfhdfyhf",
+        "__EMPTY_5": "ram...........//"
+      },
+      {
+        "Name": "Santosh Madhavi",
+        "Email": "",
+        "Phone Number": "drdryr",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Nidhi",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "xgdfdfhdf",
+        "Courese": "dfgdfdfhdf",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Aditya Prakash",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Garima Jain",
+        "Email": "",
+        "Phone Number": "sddssd",
+        "Location": "",
+        "Courese": "gdgdf",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Apoorva Sharma",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Nishant Kathpalia",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Arpita Panda",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Shashank Awasthi",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Peeyush",
+        "Email": "peeyush151003@gmail.com",
+        "Phone Number": 7355102134,
+        "Location": "Noida",
+        "Courese": "Banking and Finance Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Vaibhav",
+        "Email": "vaibhavmishra192000@gmail.com",
+        "Phone Number": 9919900772,
+        "Location": "Allahabad",
+        "Courese": "Finance Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Ruchita Borse",
+        "Email": "ruchitaborse5@gmail.com",
+        "Phone Number": 7350467965,
+        "Location": "Dhule",
+        "Courese": "BCA",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Shivabhai Vanjar",
+        "Email": "shiva.vanjar@adani.com",
+        "Phone Number": 9979797973,
+        "Location": "Gujrat",
+        "Courese": "Supply Chain Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Manisha Dewarde",
+        "Email": "manisaha.dewarde@yahoo.com",
+        "Phone Number": 9850586031,
+        "Location": "Mumbai",
+        "Courese": "Banking and Finance Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Rajvardhan Gharge",
+        "Email": "rajvardhan0918@gmail.com",
+        "Phone Number": 9373461087,
+        "Location": "Islampur",
+        "Courese": "Business Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Saurabh Mandal",
+        "Email": "saurabhmandal.prabhat@gmail.com",
+        "Phone Number": 9903692883,
+        "Location": "Jhargram",
+        "Courese": "Operations Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Shreya Shukla",
+        "Email": "shreyashukla198@gmail.com",
+        "Phone Number": 8795694494,
+        "Location": "Kanpur",
+        "Courese": "Marketing Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Aman",
+        "Email": "aman0261@hotmail.com",
+        "Phone Number": 9118090261,
+        "Location": "Delhi",
+        "Courese": "Banking and Finance Management",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "raj fix this",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "do it",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "raj do it",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "",
+        "Email": "",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      },
+      {
+        "Name": "Babu kble hoi ",
+        "Email": "jble hoi ho jai",
+        "Phone Number": "",
+        "Location": "",
+        "Courese": "",
+        "__EMPTY_5": ""
+      }
+    ],
+    "Sheet8": [
+      {
+        "Ram Bhai": "",
+        "raj bhai ....": "",
+        "Blazer": ""
+      },
+      {
+        "Ram Bhai": "",
+        "raj bhai ....": "",
+        "Blazer": ""
+      },
+      {
+        "Ram Bhai": "puopoupoup",
+        "raj bhai ....": "",
+        "Blazer": "jkhoo;;"
+      }
+    ],
+    "Sheet9": [
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": "xcgxgdgd"
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "poupopup",
+        "__EMPTY_1": "",
+        "__EMPTY_2": "hpiohioh"
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "",
+        "__EMPTY_2": ""
+      },
+      {
+        "sfsdfdsfd": "",
+        "__EMPTY_1": "sdgsdgsdgd",
+        "__EMPTY_2": ""
+      }
+    ]
+  },
+  "checkedAt": "2026-01-23T15:41:13.487Z"
+}
