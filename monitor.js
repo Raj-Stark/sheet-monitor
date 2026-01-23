@@ -9,8 +9,7 @@ import "dotenv/config";
 
 const SHEET_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSt2cvTqROnPbXURx-AQbn9wIXLgLUicI3tnd6akeHvwsv3XtXH520b45ev6FjRP789e_q8t4YpkEYJ/pub?output=xlsx";
-
-const STATE_FILE = "./state.json";
+const STATE_FILE = "/app/data/state.json";
 
 const EMAIL_FROM = "rpal778866@gmail.com";
 const EMAIL_TO = "sunilcollegecosmos@gmail.com";
