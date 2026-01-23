@@ -8,7 +8,7 @@ import "dotenv/config";
 /* ================= CONFIG ================= */
 
 const SHEET_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSt2cvTqROnPbXURx-AQbn9wIXLgLUicI3tnd6akeHvwsv3XtXH520b45ev6FjRP789e_q8t4YpkEYJ/pub?output=xlsx";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vSAdsK-mffhGe8NonrLkAkRn1DFgtLDnMtdj1OzX5j6PCukVn-pfNmnIWBmraLJehnFvFWsRfnVjGmH/pub?output=xlsx";
 
 const STATE_FILE = "/app/data/state.json";
 
