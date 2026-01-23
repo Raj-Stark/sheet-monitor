@@ -9,6 +9,7 @@ import "dotenv/config";
 
 const SHEET_URL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vSt2cvTqROnPbXURx-AQbn9wIXLgLUicI3tnd6akeHvwsv3XtXH520b45ev6FjRP789e_q8t4YpkEYJ/pub?output=xlsx";
+
 const STATE_FILE = "/app/data/state.json";
 
 const EMAIL_FROM = "rpal778866@gmail.com";
@@ -159,11 +160,13 @@ const transporter = nodemailer.createTransport({
 });
 
 async function sendEmail({ changes, addedTabs, deletedTabs }) {
-  const grouped = changes.reduce((acc, c) => {
-    acc[c.tab] ||= [];
-    acc[c.tab].push(c);
-    return acc;
-  }, {});
+  // Group changes: tab → row → column changes
+  const grouped = {};
+  for (const c of changes) {
+    grouped[c.tab] ||= {};
+    grouped[c.tab][c.row] ||= [];
+    grouped[c.tab][c.row].push(c);
+  }
 
   const summary = `
     <ul>
@@ -182,58 +185,64 @@ async function sendEmail({ changes, addedTabs, deletedTabs }) {
 
   if (addedTabs.length) {
     sections.push(
-      `<h3>[STRUCTURAL] Tabs Added</h3><ul>${addedTabs
-        .map((t) => `<li>${t}</li>`)
-        .join("")}</ul>`
+      `<h3>[STRUCTURAL] Tabs Added</h3>
+       <ul>${addedTabs.map((t) => `<li>${t}</li>`).join("")}</ul>`
     );
   }
 
   if (deletedTabs.length) {
     sections.push(
-      `<h3>[STRUCTURAL] Tabs Deleted</h3><ul>${deletedTabs
-        .map((t) => `<li>${t}</li>`)
-        .join("")}</ul>`
+      `<h3>[STRUCTURAL] Tabs Deleted</h3>
+       <ul>${deletedTabs.map((t) => `<li>${t}</li>`).join("")}</ul>`
     );
   }
 
   for (const [tab, rows] of Object.entries(grouped)) {
-    const table = rows
-      .map(
-        (c) => `
-        <tr>
-          <td>${c.row}</td>
-          <td>${c.column}</td>
-          <td><strong>${c.type}</strong></td>
-          <td>${c.before || "<i>blank</i>"}</td>
-          <td>${c.after || "<i>blank</i>"}</td>
-        </tr>
-      `
-      )
-      .join("");
+    let tabHtml = `<h3>Tab: ${tab}</h3>`;
 
-    sections.push(`
-      <h3>Tab: ${tab} (${rows.length} changes) [${
-      rows.some((r) => r.severity === "STRUCTURAL") ? "STRUCTURAL" : "DATA"
-    }]</h3>
-      <table border="1" cellpadding="6" cellspacing="0" width="100%">
-        <thead>
+    for (const [rowNum, rowChanges] of Object.entries(rows)) {
+      const isStructural = rowChanges.some((c) => c.severity === "STRUCTURAL");
+
+      const rowsHtml = rowChanges
+        .map(
+          (c) => `
           <tr>
-            <th>Row</th>
-            <th>Column</th>
-            <th>Change</th>
-            <th>Before</th>
-            <th>After</th>
+            <td>${c.column}</td>
+            <td><strong>${c.type}</strong></td>
+            <td>${c.before || "<i>blank</i>"}</td>
+            <td>${c.after || "<i>blank</i>"}</td>
           </tr>
-        </thead>
-        <tbody>${table}</tbody>
-      </table>
-    `);
+        `
+        )
+        .join("");
+
+      tabHtml += `
+        <h4 style="margin-top:16px">
+          Row ${rowNum} ${
+        isStructural ? "<span style='color:#c53030'>(STRUCTURAL)</span>" : ""
+      }
+        </h4>
+        <table border="1" cellpadding="6" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Change</th>
+              <th>Before</th>
+              <th>After</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      `;
+    }
+
+    sections.push(tabHtml);
   }
 
   await transporter.sendMail({
     from: EMAIL_FROM,
     to: EMAIL_TO,
-    subject: "Google Sheet Updated — Structural & Data Changes",
+    subject: "Google Sheet Updated — Grouped Changes",
     html: `
       <div style="font-family:Arial,sans-serif">
         <h2>Google Sheet Update Summary</h2>
@@ -271,7 +280,10 @@ async function sendEmail({ changes, addedTabs, deletedTabs }) {
       console.log("No change detected");
     }
 
-    saveState({ tabRows: currentTabs, checkedAt: new Date().toISOString() });
+    saveState({
+      tabRows: currentTabs,
+      checkedAt: new Date().toISOString(),
+    });
   } catch (err) {
     console.error("Monitor error:", err.message);
   }
