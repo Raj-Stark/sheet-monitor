@@ -1,22 +1,3 @@
-/**
- * Sheet Monitor (hardened)
- * - Diff by Row-ID (not row index)
- * - Save state/snapshots ONLY after email success
- * - Ignore fully empty rows
- * - Detect header changes
- * - Zip attachments (single .zip containing per-tab CSVs)
- * - File lock (prevents concurrent runs)
- * - Atomic state/snapshot writes
- *
- * Notes:
- * 1) Row-ID column defaults to "id" (case-insensitive). Override via env ROW_ID_COLUMN.
- * 2) Snapshots are now stored as { headers: string[], rows: object[] }.
- *    Backward compatible with old snapshots that were just an array of rows.
- *
- * Dependency added: archiver
- *   npm i archiver
- */
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -36,7 +17,7 @@ const __dirname = dirname(__filename);
 /* ================= CONFIG ================= */
 
 const SHEET_URL =
-  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTqsWL3XdkpXd_bM2gEqU2cO3e44eaQAL3xlVUo_0issc-iWGVvPJ9k1z6B2LrrPzxMnH4X0qXPGt6N/pub?output=xlsx";
+  "https://docs.google.com/spreadsheets/d/e/2PACX-1vTCVz8BJbH4U8ITIl9B6SGOs_QZturLdp5pcRJAsgExc8hie9lqFqrrgaOpxeZKbtGvXKUSvjFTwai8/pub?output=xlsx";
 
 const DATA_DIR = path.join(__dirname, "data");
 const STATE_FILE = path.join(DATA_DIR, "state.json");
