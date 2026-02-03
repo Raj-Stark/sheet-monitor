@@ -502,24 +502,51 @@ const transporter = nodemailer.createTransport({
 });
 
 async function sendEmail({ allChanges, addedTabs, deletedTabs, attachments }) {
-  // Group changes by tab then row-key
-  const grouped = {};
+  // --- Aggregate counts per tab (NO row-wise rendering) ---
+  const tabSummaries = [];
+
   for (const [tab, changes] of Object.entries(allChanges)) {
-    grouped[tab] = {};
-    for (const c of changes) {
-      const k = String(c.row);
-      grouped[tab][k] ||= [];
-      grouped[tab][k].push(c);
-    }
+    const structuralCount = changes.filter(
+      (c) => c.severity === "STRUCTURAL"
+    ).length;
+
+    const dataCount = changes.filter((c) => c.severity === "DATA").length;
+
+    tabSummaries.push({
+      tab,
+      status: "Updated",
+      structuralCount,
+      dataCount,
+    });
   }
 
+  for (const tab of addedTabs) {
+    tabSummaries.push({
+      tab,
+      status: "Added",
+      structuralCount: "—",
+      dataCount: "—",
+    });
+  }
+
+  for (const tab of deletedTabs) {
+    tabSummaries.push({
+      tab,
+      status: "Deleted",
+      structuralCount: "—",
+      dataCount: "—",
+    });
+  }
+
+  // --- Summary counts (kept for parity with old behavior) ---
   const allChangesList = Object.values(allChanges).flat();
   const totalData = allChangesList.filter((c) => c.severity === "DATA").length;
+
   const totalStructural = allChangesList.filter(
     (c) => c.severity === "STRUCTURAL"
   ).length;
 
-  const summary = `
+  const summaryHtml = `
     <ul>
       <li><strong>Tabs Changed:</strong> ${Object.keys(allChanges).length}</li>
       <li><strong>Tabs Added:</strong> ${addedTabs.length}</li>
@@ -529,75 +556,58 @@ async function sendEmail({ allChanges, addedTabs, deletedTabs, attachments }) {
     </ul>
   `;
 
-  const sections = [];
+  // --- Table rows (tab-level only) ---
+  const tableRowsHtml = tabSummaries
+    .map(
+      (t) => `
+        <tr>
+          <td><strong>${t.tab}</strong></td>
+          <td>${t.status}</td>
+          <td>${t.structuralCount}</td>
+          <td>${t.dataCount}</td>
+        </tr>
+      `
+    )
+    .join("");
 
-  if (addedTabs.length) {
-    sections.push(
-      `<h3 style="color:#2e7d32">[NEW] Tabs Added</h3>
-       <ul>${addedTabs.map((t) => `<li>${t}</li>`).join("")}</ul>`
-    );
-  }
-
-  if (deletedTabs.length) {
-    sections.push(
-      `<h3 style="color:#c53030">[REMOVED] Tabs Deleted</h3>
-       <ul>${deletedTabs.map((t) => `<li>${t}</li>`).join("")}</ul>`
-    );
-  }
-
-  for (const [tab, rows] of Object.entries(grouped)) {
-    let tabHtml = `<h3 style="color:#1565c0">Tab: ${tab}</h3>`;
-    tabHtml += `<p style="margin:8px 0"><strong>📎 Changed tabs are attached as ZIP (CSV per tab)</strong></p>`;
-
-    for (const [rowKey, rowChanges] of Object.entries(rows)) {
-      const isStructural = rowChanges.some((c) => c.severity === "STRUCTURAL");
-
-      const rowsHtml = rowChanges
-        .map(
-          (c) => `
-          <tr>
-            <td>${c.column}</td>
-            <td><strong>${c.type}</strong></td>
-            <td style="color:#c53030">${c.before || "<i>blank</i>"}</td>
-            <td style="color:#2e7d32">${c.after || "<i>blank</i>"}</td>
-          </tr>
-        `
-        )
-        .join("");
-
-      tabHtml += `
-        <h4 style="margin-top:12px">
-          Row ${rowKey} ${
-        isStructural ? `<span style="color:#c53030">(STRUCTURAL)</span>` : ""
-      }
-        </h4>
-        <table border="1" cellpadding="5" cellspacing="0" width="100%" style="border-collapse:collapse">
-          <thead>
-            <tr style="background:#f0f4f8">
-              <th>Column</th>
-              <th>Change</th>
-              <th>Before</th>
-              <th>After</th>
-            </tr>
-          </thead>
-          <tbody>${rowsHtml}</tbody>
-        </table>
-      `;
-    }
-
-    sections.push(tabHtml);
-  }
-
+  // --- Send email (attachments untouched) ---
   await transporter.sendMail({
     from: EMAIL_FROM,
     to: EMAIL_TO,
-    subject: `[Sheet Alert] ${Object.keys(allChanges).length} tab(s) updated`,
+    subject: `[Sheet Alert] ${tabSummaries.length} tab(s) updated`,
     html: `
-      <div style="font-family:Arial,sans-serif; max-width:900px; margin:0 auto">
-        <h2>Google Sheet Update Summary</h2>
-        ${summary}
-        ${sections.join("<hr/>")}
-        <p style="font-size:11px;color:#999;margin-top:24px">Auto-generated at ${new Date().toISOString()}</p>
+      <div style="font-family:Arial,sans-serif; max-width:800px; margin:0 auto">
+        <h2>Google Sheet Update Alert</h2>
+
+        ${summaryHtml}
+
+        <p>
+          The following tab(s) have received updates.
+          Detailed row-wise changes are available in the attached ZIP file
+          (CSV per tab).
+        </p>
+
+        <table border="1" cellpadding="8" cellspacing="0" width="100%" style="border-collapse:collapse">
+          <thead style="background:#f0f4f8">
+            <tr>
+              <th>Tab</th>
+              <th>Status</th>
+              <th>Structural Changes</th>
+              <th>Data Changes</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tableRowsHtml}
+          </tbody>
+        </table>
+
+        <p style="margin-top:16px">
+          📎 Please check the attached ZIP file for full details.
+        </p>
+
+        <p style="font-size:11px;color:#999;margin-top:24px">
+          Auto-generated at ${new Date().toISOString()}
+        </p>
       </div>
     `,
     attachments,
