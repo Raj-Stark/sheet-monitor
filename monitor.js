@@ -26,7 +26,7 @@ const EXPORT_DIR = path.join(DATA_DIR, "exports");
 const LOCK_FILE = path.join(DATA_DIR, "monitor.lock");
 
 const EMAIL_FROM = "rpal778866@gmail.com";
-const EMAIL_TO = "collegecosmoswork@gmail.com";
+const EMAIL_TO = "sunilcollegecosmos@gmail.com";
 
 const DEBUG = true;
 
